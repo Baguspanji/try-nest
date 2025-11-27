@@ -10,12 +10,8 @@ import { Inventory } from './inventories/entities/inventory.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: '0.0.0.0',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'inventory_db',
+      type: 'sqlite',
+      database: 'database.sqlite',
       entities: [Category, Inventory],
       synchronize: true,
     }),
